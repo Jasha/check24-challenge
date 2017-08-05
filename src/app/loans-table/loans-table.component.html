@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table table-hover table-responsive loans-table">
+    <thead>
+      <tr>
+        <th>Bank</th>
+        <th>Flags</th>
+        <th>Monthly rate</th>
+        <th>Interest rate</th>
+        <th>Total loan amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bank of banks; let i = index" (click)="onSelectBank(i)">
+        <td>{{bank.bank}}</td>
+        <td>{{bank.flags}}</td>
+        <td class="text-right">{{bank.monthlyRate.toFixed(2)}} €</td>
+        <td class="text-right">{{bank.interestMin}}% to {{bank.interestMax}}%</td>
+        <td class="text-right">{{bank.totalLoanAmount.toFixed(2)}} €</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

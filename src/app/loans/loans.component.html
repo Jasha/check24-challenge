@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-4">
+    <c24-selected-filter [title]="'Loan amount'" [value]="loanAmount" [descriptor]="'€'"></c24-selected-filter>
+  </div>
+  <div class="col-md-4">
+    <c24-selected-filter [title]="'Duration'" [value]="duration" [descriptor]="'months'"></c24-selected-filter>
+  </div>
+  <div class="col-md-4">
+    <c24-selected-filter [title]="'Purpose'" [value]="purpose"></c24-selected-filter>
+  </div>
+</div>
+<div class="row">
+  <c24-loans-table [banks]="banks"></c24-loans-table>
+</div>

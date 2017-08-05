@@ -1,0 +1,57 @@
+<form class="form-horizontal" [formGroup]="applyForLoanForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-10">
+      <select class="form-control" formControlName="title" id="title">
+        <option value="" disabled selected>Please choose</option>
+        <option value="mr">Mr.</option>
+        <option value="ms">Ms.</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="first-name" class="col-sm-2 control-label">First name</label>
+    <div class="col-sm-10">
+      <input class="form-control" formControlName="firstName" id="first-name" placeholder="First name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="last-name" class="col-sm-2 control-label">Last name</label>
+    <div class="col-sm-10">
+      <input class="form-control" formControlName="lastName" id="last-name" placeholder="Last name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" formControlName="email" id="email" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="birthday" class="col-sm-2 control-label">Birthday</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="birthday" formControlName="birthday" placeholder="dd.mm.YYYY">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="zip-code" class="col-sm-2 control-label">Zip code</label>
+    <div class="col-sm-10">
+      <input class="form-control" id="zip-code" formControlName="zipCode" type="number" placeholder="Zip code">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="street-name" class="col-sm-2 control-label">Street</label>
+    <div class="col-sm-5">
+      <input class="form-control" id="street-name" formControlName="streetName" placeholder="Name">
+    </div>
+    <div class="col-sm-5">
+      <input class="form-control" id="street-number" formControlName="streetNumber" type="number" placeholder="Number">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10 text-right">
+      <button class="btn btn-warning" (click)="onBackClick()">Go back</button>
+      <button class="btn btn-success" [disabled]="applyForLoanForm.pristine || !applyForLoanForm.valid">Apply for loan</button>
+    </div>
+  </div>
+</form>

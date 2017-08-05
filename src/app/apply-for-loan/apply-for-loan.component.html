@@ -1,0 +1,19 @@
+<div class="well well-lg">
+  <div class="row">
+    <div class="col-md-4">{{bankName}}</div>
+    <div class="col-md-2">{{feedbackNumber}}</div>
+    <div class="col-md-2">{{rating}}</div>
+    <div class="col-md-2 text-right">{{totalLoanAmount}} €</div>
+    <div class="col-md-2 text-right">{{months}}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-2">feedbacks</div>
+    <div class="col-md-2">rating</div>
+    <div class="col-md-2 text-right">total loan amount</div>
+    <div class="col-md-2 text-right">months</div>
+  </div>
+</div>
+<div class="well well-lg apply-loan-form-holder">
+  <c24-apply-for-loan-form [backAction]="onBackClick"></c24-apply-for-loan-form>
+</div>
